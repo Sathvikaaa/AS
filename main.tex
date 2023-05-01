@@ -1,0 +1,568 @@
+\documentclass{beamer}
+
+% Theme
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+%\usepackage{titling}
+\definecolor{blue}{RGB}{0, 102, 204}
+\setbeamercolor{structure}{fg=blue}
+% Title page
+\title{Statistics on further studies of students in IIT H}
+\subtitle{MA4240  Applied Statistics}
+\author{\footnotesize Shreyas Wankhede \and Pradeep Mundlik \and Akshitha Kola\and Dhatri Reddy\\ Mouktika Cherukupalli \and Avinash Malothu\and Sumeeth Kumar\and Sathvika Marri}
+\institute{\large Indian Institute of Technology Hyderabad}
+\date{\today}
+
+% Begin document
+\begin{document}
+
+% Title slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Outline slide
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+% Content slides
+\section{Introduction}
+\begin{frame}
+  \frametitle{Introduction}
+  \begin{block}{}  
+  This project is based on further studies of students studying at IITH. We have used statistics to deduce few conclusions from the given data, assuming that the data is random sample population.  
+  \end{block}
+
+  \begin{block}{}  
+  We used sampling, more specifically volunteer sampling for collection of data through mail from students at IITH but only a few of them volunteered to respond. The data was collected from 114 students, and it is diverse with data from different years of UG.
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Variables of interest}
+      \begin{enumerate}
+          \item Which department?
+          \item Gender
+          \item Annual family income
+          \item CGPA
+          \item Interested in further studies (if yes) 
+          \begin{itemize}
+              \item After how many years of work experience?
+              \item Which degree?( Masters/ PhD/ MBA)
+              \item Location
+              \item In which department(Same as bachelors or different?)
+          \end{itemize}
+          \item Interested in further studies(if no)
+          \begin{itemize}
+              \item Are you interested in civil services?
+              \item Are you interested in software development?
+          \end{itemize}
+      \end{enumerate}
+  \end{block}  
+\end{frame}
+
+\section{Data Visualization}
+\begin{frame}
+  \frametitle{Data visualization}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{Plot of preference of students to higher studies}
+  \includegraphics[scale=0.37]{yes or no.jpg}
+  \label{fig:1}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{immediately or later}
+  \includegraphics[scale=0.63]{just.jpg}
+  \label{fig:2}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{same or diff}
+  \includegraphics[scale=0.4]{same or diff.jpg}
+  \label{fig:3}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{work}
+  \includegraphics[scale=0.6]{work.png}
+  \label{fig:4}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  \caption{department wise students opting for higher studies}
+  \includegraphics[scale=0.4]{dept.jpg}
+  \label{fig:5}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{degree}
+  \includegraphics[scale=0.7]{degree.png}
+  \label{fig:6}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Visualising frequency plots}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.7]{location.png}
+  \label{fig:7}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.22]{dept vs coun.jpg}
+  \label{fig:12}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.45]{income vs degree.jpg}
+  \label{fig:13}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.2]{same or diff vs st.jpg}
+  \label{fig:11}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.6]{interest vs dept.jpg}
+  \label{fig:9}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.6]{income vs students.jpg}
+  \label{fig:10}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Visualising cross plots for various categorical variables}
+  \begin{figure}
+  \centering
+  % \caption{location}
+  \includegraphics[scale=0.45]{CGPA vs interest.jpg}
+  \label{fig:8}
+  \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{ Percentage Contingency table between Gender and interest in pursuing further studies}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & Yes & No  & Total (\%) \\
+\hline
+Male & 53.10 & 17.70 & 70.80  \\
+\hline
+Female & 23.89 & 5.31  & 29.20 \\
+\hline
+Total (\%)  & 76.99 & 23.01 & 100.00 \\
+
+\hline
+\end{tabular}
+
+\end{table}
+
+  \end{block}
+\end{frame}
+\begin{frame}
+  \begin{block}{ Percentage Contingency table between preferred program and preferred location}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & MBA & Masters & PhD & Total (\%) \\
+\hline
+European Countries & 5.75 & 14.94 & 3.45 & 24.14 \\
+\hline
+India & 13.79 & 8.05  & 3.45 & 25.29 \\
+\hline
+Japan or other Asian countries & 1.15 & 1.15 & 1.15 & 3.45  \\
+\hline
+USA/Canada & 6.90 & 34.48 & 5.75 & 47.13 \\
+\hline
+Total (\%)  & 27.59 & 58.62 & 13.79 & 100.00 \\
+
+\hline
+\end{tabular}
+
+\end{table}
+
+  \end{block}
+\end{frame}
+
+\section{Data Analysis}
+\begin{frame}
+  \frametitle{Data Analysis}
+  \begin{block}{Conclusions}
+    With Around 113 students participating in the survey,\\ 77\% students are interested in pursuing higher studies and 23\% students are not interested in pursuing higher studies.\\
+    {\textbf{Experience:}}\\
+    37.9 \% students want to pursue higher studies with no experience, 62.1\% students want to pursue higher studies with experience.\\
+    {\textbf{Degree preference:}}\\
+    58.1\% want to pursue masters, 14.0\% want to pursue phD, 27.9\% want to pursue MBA.\\
+  \end{block}
+\end{frame}
+
+\section{Data Analysis}
+\begin{frame}
+  \frametitle{Data Analysis}
+  \begin{block}{Conclusions}
+    {\textbf{Location preference:}}\\
+    47.1\% want to pursue in USA/Canada, 25.3\% want to pursue in India, 24.1\% want to pursue in European countries, 3.4\% Japan or other Asian countries.\\
+    {\textbf{Field Interest:}}\\
+    72.56\% students are interested in civil services, 27.44\% students are not interested in civil services.\\
+    74.33\% students are interested in software related jobs, 25.66\% students are not interested in software related jobs.
+  \end{block}
+\end{frame}
+
+\section{Hypothesis Testing}
+\begin{frame}
+    \frametitle{Hypothesis Testing}
+    \begin{block}{\textbf{Case 1:}{ Comparing CGPA of students who are willing
+                to
+                pursue higher studies with students who don't want to pursue
+            }}
+        We assume our null hypothesis to be that average CGPA of students
+        willing
+        to go for higher studies is  greater than or equal to those who don't
+        want to. Let
+        $\alpha =
+            0.05$.
+        \begin{enumerate}
+            \item	$\bar{x_1}$ = sample mean of CGPA of people willing to
+                  go for
+                  higher studies\\
+            \item	$\bar{x_2}$ = sample mean of CGPA of people who  don't
+                  want to
+                  go for higher studies\\
+            \item	$s^2_1$ = sample standard deviation of CGPA of people
+                  willing
+                  for higher studies\\
+            \item	$s^2_2$ = sample standard deviation of CGPA of people
+                  who
+                  don't want \\
+        \end{enumerate}
+        For Hypothesis Testing we make the following statements:
+        \begin{align}
+            H_0=\mu_1-\mu_2\geq0 \\
+            H_a=\mu1-\mu2<0
+        \end{align}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+    \begin{block}{\textbf{Case 1 continued:}}
+        Information:
+        \begin{align}
+             & \bar{x_1}=8.4447 \\
+             & \bar{x_2}=8.3919 \\
+             & s^2_1=0.7694     \\
+             & s^2_2=0.5672     \\
+             & n_1=87           \\
+             & n_2=26
+        \end{align}
+        since $\dfrac{s^2_1}{s^2_2}<4$ , we can assume the population variances
+        would be equal. \\
+        Degrees of freedom, $$dof=n_1+n_2-2=111$$
+    \end{block}
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+
+    \begin{block}{Case 1 continued:}
+
+        The pooled variance will be:
+        \begin{align}
+            s^2_p=\dfrac{(n_1-1)s^2_1+(n_2-1)s^2_2}{n_1+n_2-2}=0.5317
+        \end{align}
+        The test statistic is given by:
+        \begin{align}
+            t=\dfrac{\bar{x_1}-\bar{x_2}-0}{s_p\sqrt{\dfrac{n_2+n_1}{n_1n_2}}}=0.3314
+        \end{align}
+        Using the rejection region approach, we reject $H_0$ if
+        $t_{0.05,111}\geq -t$ where $t_{0.05,111}=-1.6587$. We have enough
+        statistical
+        evidence to reject null hypothesis since observed t is lesser than
+        1.6587
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Hypothesis Testing}
+  \begin{block}{\textbf{Case 2:}{ Hypothesized testing if students want an average work experience of more than 1 year before going for further studies }}
+     Let us assume the null hypothesis as the average work experience of students willing to go for higher studies is  less than 1 year. Let $\alpha = 0.05$.
+
+     The hypotheses are:
+      \begin{align*}
+          H_0=\mu\leq \mu_0\\
+          H_a=\mu > \mu_0
+      \end{align*}
+      where $\mu_0 = 1$
+
+     \begin{enumerate*}
+         \item  $\bar{X}$ = Average years of work experience before going for further studies\\
+         \item  $S^2$ = Sample standard deviation of number of years of work experience of students willing to go for higher studies\\
+         \item $n$ = Number of students planning to go for further studies\\
+     \end{enumerate*}
+        \end{block}
+    \end{frame}
+
+    \begin{frame}{Hypothesis testing}
+        \begin{block}{\textbf{Case 2 continued:}}
+            Information:
+             \begin{align}
+                 &\bar{X}= 1.33\\
+                 &S^2 = 1.74\\
+                 &n=87\\
+                 &df = n-1 = 86
+             \end{align}
+             The test statistic is given by:
+             \begin{align}
+                 t^* &= \frac{\bar{X} - \mu_0}{ S/ \sqrt{n}}
+                 = \frac{1.33 - 1}{\frac{\sqrt{1.74}}{\sqrt{87}}}
+                 = 2.34
+             \end{align}
+
+             Using the rejection region approach, we reject $H_0$ if $ t^* \geq t_{0.05,86}$ where $t_{0.05,86} = 1.6628$. Hence, we have enough statistical evidence to reject null hypothesis $H_0$.
+        \end{block}
+    \end{frame}
+
+
+\begin{frame}{Hypothesis testing}
+
+    \begin{block}{\textbf{Case 3:} Comparing average work experience students
+            take before going for higher studies in \textbf{Management field} vs
+            in \textbf{Research field} }
+
+        Let us assume the null hypothesis as avg work experience of students
+        going for MBA is less than or equal to avg work experience of students going
+        for MS/PhD
+        \\Let $\alpha=0.05$ \\
+        \begin{enumerate}
+            \item $\bar{X_1} = $ sample mean of avg work experience of students
+                  willing to go for MBA \\
+            \item $\bar{X_2} = $ sample mean of avg work experience of students
+                  willing to go for MS/PhD \\
+            \item $\bar{s_1} = $ sample variance of avg work experience of
+                  students willing to go for MBA \\
+            \item $\bar{s_1} = $ sample variance of avg work experience of
+                  students willing to go for MS/PhD \\
+        \end{enumerate}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+
+    \begin{block}{\textbf{Case 3:} Continued}
+        The hypotheses are:
+        \begin{align}
+            H_0 = \mu_1 - \mu_2 \leq 0 \\
+            H_a = \mu_1 - \mu_2 > 0
+        \end{align}
+        Information:
+        \begin{align}
+            \bar{X_1} = 1.54 \\
+            \bar{X_2} = 1.25 \\
+            \bar{s_1} = 1.30 \\
+            \bar{s_1} = 1.90 \\
+            \bar{n_1} = 24 \\
+            \bar{n_2} = 63 \\
+        \end{align}
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Hypothesis testing}
+
+    \begin{block}{\textbf{Case 3:} Continued}
+        \begin{align}
+            c  & = \frac{\frac{s_1^2}{n_1}}{\frac{s_1^2}{n_1} +
+            \frac{s_2^2}{n_2}} = \frac{\frac{(1.30)^2}{24}}{\frac{(1.30)^2}{24} + \frac{(1.90)^2}{63}} = 0.57 \\
+            df & =
+            \frac{\left(n_1-1\right)\left(n_2-1\right)}{\left(1-c\right)^2 \left(n_1-1\right) + c^2 \left(n_2-1\right)} \\
+             &=   \frac{\left(24-1\right)\left(63-1\right)}{\left(1-0.57\right)^2 \left(24-1\right) + (0.57)^2 \left(63-1\right)} = 58.45 \\
+             df & \thickapprox  54
+        \end{align}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+    \begin{block}{\textbf{Case 3:} Continued}
+        The test static is given by:
+        \begin{align}
+            t' = \frac{\left(\bar{X_1}-\bar{X_2}\right) - D_0} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} 
+        \end{align}
+        where, $D_0 = 0$\\
+        \begin{align}
+            t' = \frac{\left(1.54-1.25\right) - 0} {\sqrt{{\frac{(1.30)^2}{24} + \frac{(1.90)^2}{63}}}}  = 0.81
+        \end{align}
+        \textbf{RR:} $ t' \geq t_{0.05} $, at $df = 54$ \\
+        Here, $t_{0.05,54} = 1.67 > t'$ 
+    \end{block}
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+    \begin{block}{\textbf{Case 3:} Continued}
+        Since, $t'$ does not fall in rejection region for $\alpha=0.05$, we fail to reject $H_0$.
+        Here, we don't have enough evidence to say that avg work experience of MBA willing students is more than MS/PhD willing students.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Hypothesis testing}
+
+    \begin{block}{\textbf{Case 4:} Hypothesized proportion testing if there is
+            enough evidence that the proportions of people opting for masters,
+            MBA, Phd are
+            not all equal}
+        Sample data :
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            Masters & MBA & PhD & Total \\
+            \hline
+            50      & 24  & 13  & 87    \\
+            \hline
+        \end{tabular}\\
+
+        Let $P_{Ms}$, $P_{MBA}$, $P_{PhD}$ denote proportions of students
+        willing
+        to pursue Masters, MBA, PhD for higher studies \\
+
+        $H_{0}$ :  $P_{Ms} = P_{MBA} = P_{PhD} = \dfrac{1}{3}$ \space \space
+        \space
+        \space $H_{a}$ : atleast one $P \neq \dfrac{1}{3}$\space \space \space
+        \space
+        $\alpha =0.05$\\
+
+        Also,
+        \begin{equation}
+            E = \dfrac{1}{3} x 87 = 29
+        \end{equation}
+        and,
+        \begin{equation}
+            \chi^{2} = \sum\dfrac{(O - E)^{2}}{E}
+        \end{equation}
+    \end{block}
+\end{frame}
+
+%\section{Hypothesis Testing}
+\begin{frame}
+    \frametitle{Hypothesis Testing}
+    \begin{block}{\textbf{Case 4 continued:}}
+
+        \begin{equation}
+            \begin{aligned}
+                \chi^{2} & = \dfrac{(50 - 29)^{2}}{29} + \dfrac{(24
+                    -29)^{2}}{29} +
+                \dfrac{(13 -29)^{2}}{29}
+                \\
+                         & = 15.2 + 0.862 + 8.827
+                \\
+                         & = 24.889
+            \end{aligned}
+        \end{equation}
+        At $df = 3 - 1 = 2 $ , p value $= 0.0001  $\\
+        p value $< \alpha = 0.05$\\
+        Hence there is enough evidence that population proportions are not all
+        equal.
+
+    \end{block}
+\end{frame}
+
+% End document
+\end{document}
